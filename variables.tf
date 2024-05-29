@@ -10,6 +10,12 @@ variable "subnet_cidr" {
     type = string
 }
 
+variable "subnet_cidr_public_2" {
+    description = "value of public subnet cidr 2"
+    default = "10.0.2.0/24"
+    type = string
+}
+
 variable "all_cidr_block" {
     description = "All CIDR block i.e 0.0.0.0/0"
     default = "0.0.0.0/0"
@@ -35,5 +41,11 @@ variable "key_name" {
 variable "availability_zone_1" {
     description = "Availability zone for subnet"
     default = "us-east-1a"
+    type = string
+}
+
+variable "availability_zone_2" {
+    description = "Availability zone for subnet"
+    default = "us-east-1b"
     type = string
 }

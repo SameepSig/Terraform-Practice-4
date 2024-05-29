@@ -1,14 +1,14 @@
-variable "ami" {
-}
+# variable "ami" {
+# }
 
-variable "instance_type" {
-}
+# variable "instance_type" {
+# }
 
-variable "key_name" {
-}
+# variable "key_name" {
+# }
 
-variable "security_group_id" {
-}
+# variable "security_group_id" {
+# }
 
-variable "sameep_terraform_subnet_1" {
-}
+# variable "sameep_terraform_subnet_1" {
+# }
