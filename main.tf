@@ -33,17 +33,9 @@ module "rt" {
 module "rt_association" {
     source = "./modules/rt_association"
     public_subnet_1_id = module.subnet.public_subnet_1
+    public_subnet_2_id = module.subnet.public_subnet_2
     public_route_table_id = module.rt.public_rt_1
 }
-
-#  module "ec2" {
-#     source = "./modules/ec2"
-#     ami = var.ami
-#     instance_type = var.instance_type
-#     key_name = var.key_name
-#     security_group_id = module.security_group.security_group_id
-#     sameep_terraform_subnet_1 = module.subnet.public_subnet_1
-# }
 
 module "alb" {
     source = "./modules/alb"
@@ -70,5 +62,4 @@ module "auto_scaling" {
     aws_launch_configuration_id = module.launch_template.aws_launch_configuration_id
     aws_lb_target_group_arn = module.alb.aws_lb_target_group
     # vpc_zone_identifier = [module.subnet.public_subnet_1, module.subnet.public_subnet_2]
-    # launch_configuration = module.launch_template.sameep_aws_lauch_template
 }
