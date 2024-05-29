@@ -1,0 +1,4 @@
+resource "aws_route_table_association" "sameep_association_route_table_public_1" {
+  subnet_id      = var.public_subnet_1_id
+  route_table_id = var.public_route_table_id
+}
