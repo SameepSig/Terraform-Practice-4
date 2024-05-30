@@ -1,8 +1,8 @@
-variable "availability_zone_1" {
+variable "public_subnet_1" {
 }
 
-# variable "availability_zone_2" {
-# }
+variable "public_subnet_2" {
+}
 
 variable "aws_launch_configuration_id" {
 }
