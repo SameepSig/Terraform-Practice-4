@@ -48,5 +48,5 @@ resource "aws_launch_template" "sameep_aws_lauch_template" {
     }
   }
 
-  # user_data = filebase64("${path.module}/user_data.sh")
+  user_data = filebase64("${path.module}/user_data.sh")
 }
